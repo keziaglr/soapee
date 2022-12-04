@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="SoapeeView.View.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Soapee</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" runat="server" media="screen" href="~/Style/Form.css" />
+    <link rel="stylesheet" runat="server" media="screen" href="~/Style/Home.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        
+         $(".nav .nav-link").on("click", function(){
+           $(".nav").find(".active").removeClass("active");
+           $(this).addClass("active");
+        });
+    </script>
+</head>
+<body style="margin: 0; padding: 0">
+    <form id="form1" runat="server">
+        <header style="background-color: #f89e0f; height: 50px;">
+            <div style="float:left;">
+                <h1>
+                    Soapee
+                </h1>
+                    </div>
+                        <div style ="float: right; margin-top: 10px; margin-right: 10px; font-size: 20px">
+                        <asp:LinkButton ID="btnHome" runat="server" Text="Home  " OnClick="btnHome_Click" Font-Bold="True" Font-Underline="False" ForeColor="White" Font-Names="Arial Unicode MS"/>
+                        <asp:LinkButton ID="btnLogin" runat="server" Text="Login  " OnClick="btnLogin_Click" Font-Bold="True" Font-Underline="False" ForeColor="White" Font-Names="Arial Unicode MS"/>
+                        <asp:LinkButton ID="btnRegister" runat="server" Text="Register  " OnClick="btnRegister_Click" Font-Bold="True" Font-Underline="False" ForeColor="White" Font-Names="Arial Unicode MS" />
+                        <asp:LinkButton ID="btnCart" runat="server" Text="Cart  " OnClick="btnCart_Click" Font-Bold="True" Font-Underline="False" ForeColor="White" Font-Names="Arial Unicode MS"/>
+                        <asp:LinkButton ID="btnTransaction" runat="server" Text="Transaction  " OnClick="btnTransaction_Click" Font-Bold="True" Font-Underline="False" ForeColor="White" Font-Names="Arial Unicode MS"/>
+                        <asp:LinkButton ID="btnLogout" runat="server" Text="Logout  " OnClick="btnLogout_Click" Font-Bold="True" Font-Underline="False" ForeColor="White" Font-Names="Arial Unicode MS"/>
+                    </div>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.container {
+}
+
+.product-grid {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.card-img-top {
+    height: 180px;
+}
+
+.btn-card {
+    width: 100%;
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+.search-input {
+    margin-top: 16px;
+}
